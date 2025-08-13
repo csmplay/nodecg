@@ -3,41 +3,48 @@
 		<style>
 			:host,
 			html {
-				color: white;
+				color: #e4e4e7;
 
-				--nodecg-brand-blue: #00bebe;
-				--nodecg-brand-blue-dark: #004949;
+				--nodecg-brand-blue: #22d3ee;
+				--nodecg-brand-blue-dark: #0e7490;
 				--default-primary-color: var(--nodecg-brand-blue);
 				--primary-color: var(--nodecg-brand-blue);
 
-				--nodecg-accept-color: #32784a;
-				--nodecg-benign-color: #525f78;
-				--nodecg-configure-color: #6155bd;
-				--nodecg-danger-color: #cf7e44;
-				--nodecg-disabled-color: #8d8e91;
-				--nodecg-execute-color: #ffc700;
-				--nodecg-reject-color: #a33b3b;
-				--nodecg-selected-color: #5280d9;
+				/* Modern dark theme surface colors */
+				--nodecg-surface-0: #09090b;
+				--nodecg-surface-1: #18181b;
+				--nodecg-surface-2: #27272a;
+				--nodecg-surface-3: #3f3f46;
+				--nodecg-border-color: #3f3f46;
+
+				--nodecg-accept-color: #22c55e;
+				--nodecg-benign-color: #3f3f46;
+				--nodecg-configure-color: #8b5cf6;
+				--nodecg-danger-color: #f97316;
+				--nodecg-disabled-color: #52525b;
+				--nodecg-execute-color: #eab308;
+				--nodecg-reject-color: #ef4444;
+				--nodecg-selected-color: #3b82f6;
 
 				--paper-toggle-button-checked-bar-color: var(--nodecg-brand-blue-dark);
 				--paper-toggle-button-checked-button-color: var(--nodecg-brand-blue);
 				--paper-toggle-button-checked-ink-color: var(--nodecg-brand-blue);
-				--paper-toggle-button-label-color: white;
-				--paper-toggle-button-unchecked-bar-color: #000000;
-				--paper-toggle-button-unchecked-button-color: #7f7f7f;
+				--paper-toggle-button-label-color: #e4e4e7;
+				--paper-toggle-button-unchecked-bar-color: var(--nodecg-surface-2);
+				--paper-toggle-button-unchecked-button-color: #71717a;
 
-				--paper-dialog-color: white;
+				--paper-dialog-color: #e4e4e7;
 
-				--paper-input-container-color: white;
-				--paper-input-container-focus-color: white;
-				--paper-input-container-input-color: white;
-				--paper-slider-active-color: white;
-				--paper-slider-knob-color: white;
+				--paper-input-container-color: #a1a1aa;
+				--paper-input-container-focus-color: var(--nodecg-brand-blue);
+				--paper-input-container-input-color: #e4e4e7;
+				--paper-slider-active-color: var(--nodecg-brand-blue);
+				--paper-slider-knob-color: var(--nodecg-brand-blue);
 
 				--paper-input-container: {
-					--paper-input-container-color: var(--nodecg-brand-blue);
-					--paper-input-container-focus-color: white;
-					--paper-input-container-input-color: white;
+					--paper-input-container-color: #a1a1aa;
+					--paper-input-container-focus-color: var(--nodecg-brand-blue);
+					--paper-input-container-input-color: #e4e4e7;
 				}
 
 				--paper-input-suffix: {
@@ -62,16 +69,21 @@
 					color: var(--nodecg-brand-blue);
 				}
 				--vaadin-upload-file-name: {
-					color: white;
+					color: #e4e4e7;
 				}
 			}
 
 			paper-button {
 				background: var(--nodecg-background-color);
-				border-radius: 0;
-				color: var(--nodecg-foreground-color, white);
-				font-size: 16px;
-				font-weight: 300;
+				border-radius: 6px;
+				color: var(--nodecg-foreground-color, #e4e4e7);
+				font-size: 14px;
+				font-weight: 500;
+				transition: all 0.15s ease;
+			}
+
+			paper-button:hover {
+				filter: brightness(1.1);
 			}
 
 			paper-button.nodecg-accept {
@@ -105,20 +117,23 @@
 
 			paper-button[disabled] {
 				--nodecg-background-color: var(--nodecg-disabled-color);
-				color: #54575c;
+				color: #71717a;
 			}
 
 			paper-card {
-				--paper-card-header-color: white;
-				background-color: #2f3a4f;
+				--paper-card-header-color: #e4e4e7;
+				background-color: var(--nodecg-surface-1);
 				width: 100%;
+				border-radius: 12px;
+				overflow: hidden;
+				border: 1px solid var(--nodecg-border-color);
 			}
 
 			paper-card[heading] {
 				--paper-card-header: {
-					background-color: #525f78;
-					border-bottom: 5px solid var(--nodecg-brand-blue);
-					font-weight: bold;
+					background-color: var(--nodecg-surface-2);
+					border-bottom: 3px solid var(--nodecg-brand-blue);
+					font-weight: 600;
 				}
 			}
 
@@ -128,14 +143,22 @@
 
 			paper-dialog,
 			paper-dialog-scrollable {
-				background-color: #2f3a4f;
-				color: white;
+				background-color: var(--nodecg-surface-1);
+				color: #e4e4e7;
+				border-radius: 12px;
+				border: 1px solid var(--nodecg-border-color);
 			}
 
 			a {
-				color: white;
+				color: var(--nodecg-brand-blue);
 				font-weight: 500;
 				letter-spacing: 0.018em;
+				text-decoration: none;
+				transition: color 0.15s ease;
+			}
+
+			a:hover {
+				color: #67e8f9;
 				text-decoration: underline;
 			}
 		</style>

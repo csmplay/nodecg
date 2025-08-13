@@ -151,7 +151,7 @@ export function parsePanels(
 			...sizeInfo,
 			...workspaceInfo,
 			path: filePath,
-			headerColor: panel.headerColor ?? "#525F78",
+			headerColor: panel.headerColor ?? "#27272a",
 			bundleName,
 			html: $.html(),
 		};

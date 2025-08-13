@@ -51,7 +51,7 @@ test('should return the expected data when "nodecg" property does exist', () => 
 			name: "test",
 			title: "Test Panel",
 			width: 1,
-			headerColor: "#525F78",
+			headerColor: "#27272a",
 			path: testDirPath(
 				"fixtures/bundle-parser/good-bundle/dashboard/panel.html",
 				true,
@@ -86,7 +86,7 @@ test('should return the expected data when "nodecg" property does exist', () => 
 		{
 			name: "test-fullbleed-panel",
 			title: "Test Fullbleed Panel",
-			headerColor: "#525F78",
+			headerColor: "#27272a",
 			path: testDirPath(
 				"fixtures/bundle-parser/good-bundle/dashboard/fullbleed-panel.html",
 				true,

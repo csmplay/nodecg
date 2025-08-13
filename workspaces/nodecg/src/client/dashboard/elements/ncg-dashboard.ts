@@ -49,9 +49,10 @@ class NcgDashboard extends Polymer.PolymerElement {
 			}
 
 			app-header {
-				background-color: #2F3A4F;
+				background-color: var(--nodecg-surface-1);
+				border-bottom: 1px solid var(--nodecg-border-color);
 				--app-header-shadow: {
-					box-shadow: inset 0 5px 6px -3px rgba(0, 0, 0, 0.2);
+					box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 					height: 10px;
 					bottom: -10px;
 				};
@@ -59,7 +60,8 @@ class NcgDashboard extends Polymer.PolymerElement {
 
 			app-drawer {
 				--app-drawer-content-container: {
-					background-color: #2F3A4F;
+					background-color: var(--nodecg-surface-1);
+					border-right: 1px solid var(--nodecg-border-color);
 				};
 			}
 
@@ -75,7 +77,8 @@ class NcgDashboard extends Polymer.PolymerElement {
 				height: 100%;
 				--paper-tabs-selection-bar-color: var(--nodecg-brand-blue);
 				--paper-tabs-selection-bar: {
-					border-bottom-width: 5px;
+					border-bottom-width: 3px;
+					border-radius: 3px 3px 0 0;
 				};
 			}
 
@@ -92,7 +95,7 @@ class NcgDashboard extends Polymer.PolymerElement {
 					@apply --layout-center-center;
 				};
 				--paper-tab-content-unselected: {
-					color: white;
+					color: #a1a1aa;
 				};
 			}
 
@@ -102,7 +105,12 @@ class NcgDashboard extends Polymer.PolymerElement {
 
 			paper-icon-button {
 				--paper-icon-button-ink-color: var(--nodecg-brand-blue);
-				color: white;
+				color: #a1a1aa;
+				transition: color 0.15s ease;
+			}
+
+			paper-icon-button:hover {
+				color: var(--nodecg-brand-blue);
 			}
 
 			#mainLogo {
@@ -139,15 +147,24 @@ class NcgDashboard extends Polymer.PolymerElement {
 			}
 
 			.list a {
-				color: white;
+				color: #a1a1aa;
 				display: block;
 				line-height: 40px;
 				text-decoration: none;
 				text-transform: uppercase;
+				transition: all 0.15s ease;
+				border-radius: 8px;
+				margin: 4px 0;
+			}
+
+			.list a:hover {
+				color: #e4e4e7;
+				background-color: var(--nodecg-surface-2);
 			}
 
 			.list a.iron-selected {
-				background-color: #525F78;
+				background-color: var(--nodecg-surface-2);
+				color: var(--nodecg-brand-blue);
 			}
 
 			.list a.iron-selected paper-icon-item {
@@ -193,11 +210,11 @@ class NcgDashboard extends Polymer.PolymerElement {
 			}
 
 			paper-spinner {
-				--paper-spinner-layer-1-color: #645BA6;
-				--paper-spinner-layer-2-color: #A50074;
-				--paper-spinner-layer-3-color: #5BA664;
-				--paper-spinner-layer-4-color: #C9513E;
-				--paper-spinner-stroke-width: 5px;
+				--paper-spinner-layer-1-color: var(--nodecg-brand-blue);
+				--paper-spinner-layer-2-color: #8b5cf6;
+				--paper-spinner-layer-3-color: #22c55e;
+				--paper-spinner-layer-4-color: #ef4444;
+				--paper-spinner-stroke-width: 4px;
 			}
 
 			[hidden] {

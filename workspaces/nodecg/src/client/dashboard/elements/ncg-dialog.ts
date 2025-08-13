@@ -27,10 +27,12 @@ class NcgDialog extends mixinBehaviors(
 		return Polymer.html`
 		<style include="nodecg-theme paper-dialog-shared-styles">
 			:host {
-				background-color: #2F3A4F;
+				background-color: var(--nodecg-surface-1);
 				display: flex;
 				flex-direction: column;
 				max-width: 100%;
+				border-radius: 12px;
+				border: 1px solid var(--nodecg-border-color);
 				--paper-dialog-scrollable: {
 					max-width: none;
 				}
