@@ -19,16 +19,18 @@ class NcgGraphicsBundle extends MutableData(Polymer.PolymerElement) {
 			:host {
 				@apply --layout-flex-none;
 				@apply --layout-vertical;
-				@apply --shadow-elevation-2dp;
-				background: #2F3A4F;
-				color: white;
+				background: var(--nodecg-surface-1);
+				color: #e4e4e7;
 				margin-bottom: 20px;
+				border-radius: 12px;
+				overflow: hidden;
+				border: 1px solid var(--nodecg-border-color);
 			}
 
 			#titleBar {
 				@apply --layout-horizontal;
-				background-color: #525F78;
-				border-bottom: 5px solid var(--nodecg-brand-blue);
+				background-color: var(--nodecg-surface-2);
+				border-bottom: 3px solid var(--nodecg-brand-blue);
 				margin-bottom: 13px;
 			}
 
@@ -66,21 +68,23 @@ class NcgGraphicsBundle extends MutableData(Polymer.PolymerElement) {
 			}
 
 			paper-dialog {
-				background-color: #2F3A4F;
-				color: white;
+				background-color: var(--nodecg-surface-1);
+				color: #e4e4e7;
+				border-radius: 12px;
+				border: 1px solid var(--nodecg-border-color);
 			}
 
 			paper-dialog paper-button[dialog-dismiss] {
 				--paper-button: {
 					color: white;
-					background-color: #C9513E;
+					background-color: var(--nodecg-reject-color);
 				}
 			}
 
 			paper-dialog paper-button[dialog-confirm] {
 				--paper-button: {
 					color: white;
-					background-color: #5BA664;
+					background-color: var(--nodecg-accept-color);
 				}
 			}
 		</style>

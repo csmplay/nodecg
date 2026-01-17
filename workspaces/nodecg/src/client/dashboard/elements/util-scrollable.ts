@@ -18,7 +18,7 @@ class UtilScrollable extends Polymer.PolymerElement {
 				left: 0;
 				right: 0;
 				height: 1px;
-				background: #dbdbdb;
+				background: var(--nodecg-border-color);
 			}
 
 			:host(.can-scroll:not(.scrolled-to-bottom):not(:last-child))::after {
@@ -28,7 +28,7 @@ class UtilScrollable extends Polymer.PolymerElement {
 				left: 0;
 				right: 0;
 				height: 1px;
-				background: #dbdbdb;
+				background: var(--nodecg-border-color);
 			}
 
 			.scrollable {

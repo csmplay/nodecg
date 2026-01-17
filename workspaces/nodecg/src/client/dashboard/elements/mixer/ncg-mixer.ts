@@ -15,9 +15,12 @@ class NcgMixer extends Polymer.PolymerElement {
 			}
 
 			#mixer-masterCard {
-				background-color: #525F78;
-				border-bottom: 5px solid var(--nodecg-brand-blue);
+				background-color: var(--nodecg-surface-2);
+				border-bottom: 3px solid var(--nodecg-brand-blue);
 				margin-bottom: 16px;
+				border-radius: 12px;
+				overflow: hidden;
+				border: 1px solid var(--nodecg-border-color);
 			}
 
 			#mixer-masterCard .card-content {
@@ -28,6 +31,7 @@ class NcgMixer extends Polymer.PolymerElement {
 			#mixer-masterCard span {
 				@apply --paper-font-title;
 				font-size: 28px;
+				font-weight: 600;
 				flex-grow: 1;
 				flex-shrink: 0;
 				overflow: hidden;
@@ -35,8 +39,8 @@ class NcgMixer extends Polymer.PolymerElement {
 			}
 
 			#masterFader {
-				background-color: #525F78;
-				color: white;
+				background-color: var(--nodecg-surface-2);
+				color: #e4e4e7;
 				flex-shrink: 1;
 				width: 250px;
 				--paper-slider-input: {

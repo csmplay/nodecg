@@ -27,7 +27,7 @@ class NcgSounds extends Polymer.PolymerElement {
 			#bundleFaderContainer {
 				@apply --layout-horizontal;
 				align-items: center;
-				background-color: #525F78;
+				background-color: var(--nodecg-surface-2);
 			}
 
 			#bundleFaderContainer > span {
@@ -47,7 +47,7 @@ class NcgSounds extends Polymer.PolymerElement {
 			}
 
 			#cues {
-				background-color: #2F3A4F;
+				background-color: var(--nodecg-surface-1);
 				padding-bottom: 8px;
 			}
 

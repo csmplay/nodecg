@@ -49,11 +49,11 @@ class NcgWorkspace extends Polymer.PolymerElement {
 				transform: translate(-50%);
 				width: 68px;
 				height: 68px;
-				--paper-spinner-stroke-width: 5px;
-				--paper-spinner-layer-1-color: #645BA6;
-				--paper-spinner-layer-2-color: #A50074;
-				--paper-spinner-layer-3-color: #5BA664;
-				--paper-spinner-layer-4-color: #C9513E;
+				--paper-spinner-stroke-width: 4px;
+				--paper-spinner-layer-1-color: var(--nodecg-brand-blue);
+				--paper-spinner-layer-2-color: #8b5cf6;
+				--paper-spinner-layer-3-color: #22c55e;
+				--paper-spinner-layer-4-color: #ef4444;
 			}
 
 			iframe {
