@@ -32,7 +32,7 @@ class NcgAssetCategory extends MutableData(Polymer.PolymerElement) {
 
 			#header {
 				@apply --layout-vertical;
-				background-color: #525F78;
+				background-color: var(--nodecg-surface-2);
 				padding: 12px 0;
 			}
 
@@ -47,7 +47,7 @@ class NcgAssetCategory extends MutableData(Polymer.PolymerElement) {
 			}
 
 			#files {
-				background-color: #2F3A4F;
+				background-color: var(--nodecg-surface-1);
 				max-height: 400px;
 				margin: 0 -16px;
 				padding-left: 16px;
@@ -70,7 +70,7 @@ class NcgAssetCategory extends MutableData(Polymer.PolymerElement) {
 			}
 
 			#add {
-				--nodecg-background-color: #00A651;
+				--nodecg-background-color: var(--nodecg-accept-color);
 			}
 
 			#add iron-icon {

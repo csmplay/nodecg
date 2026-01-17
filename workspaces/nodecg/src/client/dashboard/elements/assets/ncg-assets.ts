@@ -17,7 +17,7 @@ class NcgAssets extends MutableData(Polymer.PolymerElement) {
 			}
 
 			.assets-divider {
-				border-bottom: 1px solid #2F3A4F;
+				border-bottom: 1px solid var(--nodecg-border-color);
 				box-sizing: border-box;
 			}
 
@@ -27,7 +27,7 @@ class NcgAssets extends MutableData(Polymer.PolymerElement) {
 
 			.card-content {
 				padding: 0;
-				background-color: #525F78;
+				background-color: var(--nodecg-surface-2);
 			}
 		</style>
 

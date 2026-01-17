@@ -38,27 +38,28 @@ class NcgGraphic extends MutableData(Polymer.PolymerElement) {
 
 			#indicator {
 				@apply --layout-flex-none;
-				background-color: #CACACA;
+				background-color: #52525b;
 				width: 9px;
+				border-radius: 4px 0 0 4px;
 			}
 
 			:host([worst-status="nominal"]) #indicator {
-				background-color: #00A651;
+				background-color: var(--nodecg-accept-color);
 			}
 
 			:host([worst-status="out-of-date"]) #indicator {
-				background-color: #FFC700;
+				background-color: var(--nodecg-execute-color);
 			}
 
 			#counter {
 				@apply --layout-center-center;
 				@apply --layout-flex-none;
 				@apply --layout-horizontal;
-				background-color: #525F78;
-				color: #FFFFFF;
+				background-color: var(--nodecg-surface-2);
+				color: #e4e4e7;
 				font-size: 24px;
 				font-style: normal;
-				font-weight: 500;
+				font-weight: 600;
 				left: 9px;
 				line-height: normal;
 				text-align: center;
@@ -67,13 +68,13 @@ class NcgGraphic extends MutableData(Polymer.PolymerElement) {
 
 			#urlAndResolution {
 				@apply --layout-flex;
-				background-color: #525F78;
+				background-color: var(--nodecg-surface-2);
 				margin-right: 1px;
 				min-width: 0;
 			}
 
 			#url {
-				color: white;
+				color: var(--nodecg-brand-blue);
 				font-size: 16px;
 				font-style: normal;
 				font-weight: 500;
@@ -82,9 +83,15 @@ class NcgGraphic extends MutableData(Polymer.PolymerElement) {
 				max-width: 100%;
 				min-width: 0;
 				overflow: hidden;
-				text-decoration: underline;
+				text-decoration: none;
 				text-overflow: ellipsis;
 				text-transform: uppercase;
+				transition: color 0.15s ease;
+			}
+
+			#url:hover {
+				color: #67e8f9;
+				text-decoration: underline;
 			}
 
 			#resolution {
@@ -99,7 +106,7 @@ class NcgGraphic extends MutableData(Polymer.PolymerElement) {
 			#copyButton,
 			#reloadButton {
 				--paper-button: {
-					--nodecg-background-color: #6155BD;
+					--nodecg-background-color: var(--nodecg-configure-color);
 				}
 			}
 
@@ -110,7 +117,7 @@ class NcgGraphic extends MutableData(Polymer.PolymerElement) {
 
 			#collapseButton {
 				--paper-button: {
-					--nodecg-background-color: #525F78;
+					--nodecg-background-color: var(--nodecg-surface-2);
 				}
 			}
 
@@ -155,7 +162,7 @@ class NcgGraphic extends MutableData(Polymer.PolymerElement) {
 
 			:host([responsive-mode="wide"]) #resolution:before,
 			:host([responsive-mode="wide"]) #resolution:after {
-				background: #EFF0EC;
+				background: var(--nodecg-border-color);
 				height: 50px;
 				width: 1px;
 			}

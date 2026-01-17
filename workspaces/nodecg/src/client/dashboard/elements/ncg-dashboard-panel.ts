@@ -18,11 +18,22 @@ export class NcgDashboardPanel extends Polymer.PolymerElement {
 			:host {
 				display: inline-block;
 				width: 128px;
+				border-radius: 12px;
+				overflow: hidden;
+				background-color: var(--nodecg-surface-1);
+				border: 1px solid var(--nodecg-border-color);
+				transition: border-color 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			:host(:hover) {
+				border-color: var(--nodecg-brand-blue);
+				box-shadow: 0 4px 12px rgba(34, 211, 238, 0.1);
 			}
 
 			:host([fullbleed]) {
 				width: 100%!important;
 				height: 100%!important;
+				border-radius: 0;
 			}
 
 			:host(:not([fullbleed])) {
@@ -71,7 +82,9 @@ export class NcgDashboardPanel extends Polymer.PolymerElement {
 
 			#header {
 				position: relative;
-				color: var(--google-grey-100);
+				color: #e4e4e7;
+				background-color: var(--nodecg-surface-2);
+				border-bottom: 2px solid var(--nodecg-brand-blue);
 				@apply --layout-horizontal;
 				@apply --layout-end-justified;
 				@apply --layout-center;
@@ -88,6 +101,8 @@ export class NcgDashboardPanel extends Polymer.PolymerElement {
 				position: absolute;
 				left: 15px;
 				top: 6px;
+				font-weight: 600;
+				font-size: 14px;
 			}
 
 			#buttons {
@@ -127,7 +142,7 @@ export class NcgDashboardPanel extends Polymer.PolymerElement {
 			#body {
 				min-height: 1px;
 				padding: 0;
-				background-color: #f5f5f5;
+				background-color: #fafafa;
 			}
 
 			paper-icon-button[hidden] {

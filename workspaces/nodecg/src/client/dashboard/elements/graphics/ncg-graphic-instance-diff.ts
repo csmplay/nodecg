@@ -22,7 +22,9 @@ class NcgGraphicInstanceDiff extends MutableData(Polymer.PolymerElement) {
 			:host {
 				@apply --layout-center-center;
 				@apply --layout-horizontal;
-				background: #212121;
+				background: var(--nodecg-surface-0);
+				border: 1px solid var(--nodecg-border-color);
+				border-radius: 8px;
 				font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
 				font-size: 12px;
 				max-width: 100%;
@@ -38,12 +40,12 @@ class NcgGraphicInstanceDiff extends MutableData(Polymer.PolymerElement) {
 			}
 
 			.orange {
-				color: #F4C008;
+				color: var(--nodecg-execute-color);
 				font-weight: bold;
 			}
 
 			.green {
-				color: #00A651;
+				color: var(--nodecg-accept-color);
 				font-weight: bold;
 			}
 		</style>

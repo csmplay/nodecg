@@ -4,7 +4,7 @@ class UiSelect extends Polymer.PolymerElement {
 		return Polymer.html`
         <style include="nodecg-theme">
 			#label {
-				color: #a9a9a9;
+				color: #71717a;
 				cursor: default;
 				left: 12px;
 				pointer-events: none;
@@ -20,12 +20,13 @@ class UiSelect extends Polymer.PolymerElement {
 				-moz-appearance: none;
 				-webkit-appearance: none;
 				appearance: none;
-				background-color: #525F78;
+				background-color: var(--nodecg-surface-2);
 				background-image: url('/dashboard/img/select-arrow.png');
 				background-position: calc(93% + 2px) 8px;
 				background-repeat: no-repeat;
 				border: none;
-				border-bottom: 1px solid white;
+				border-bottom: 1px solid var(--nodecg-border-color);
+				border-radius: 6px;
 				box-sizing: border-box;
 				color: inherit;
 				font-family: inherit;
@@ -34,10 +35,16 @@ class UiSelect extends Polymer.PolymerElement {
 				height: 100%;
 				padding: 2px 6px;
 				width: 100%;
+				transition: border-color 0.15s ease, outline 0.15s ease;
+			}
+
+			select:hover {
+				border-color: var(--nodecg-brand-blue);
 			}
 
 			select:focus {
-				outline: 1px solid var(--nodecg-brand-blue);
+				outline: 2px solid var(--nodecg-brand-blue);
+				outline-offset: 1px;
 			}
 		</style>
 

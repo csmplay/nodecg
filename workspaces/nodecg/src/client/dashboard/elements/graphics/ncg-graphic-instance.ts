@@ -51,34 +51,35 @@ class NcgGraphicInstance extends MutableData(Polymer.PolymerElement) {
 
 			#indicator {
 				@apply --layout-flex-none;
-				background-color: #CACACA;
+				background-color: #52525b;
 				width: 8px;
+				border-radius: 4px 0 0 4px;
 			}
 
 			:host([status="nominal"]) #indicator {
-				background-color: #00A651;
+				background-color: var(--nodecg-accept-color);
 			}
 
 			:host([status="out-of-date"]) #indicator {
-				background-color: #FFC700;
+				background-color: var(--nodecg-execute-color);
 			}
 
 			#indicatorIcon {
 				@apply --layout-center-center;
 				@apply --layout-flex-none;
 				@apply --layout-horizontal;
-				background: #525F78;
-				border-right: 1px solid #6F7D99;
+				background: var(--nodecg-surface-2);
+				border-right: 1px solid var(--nodecg-border-color);
 				width: 38px;
 			}
 
 			:host([status="nominal"]) #indicatorIcon {
-				color: #00A651;
+				color: var(--nodecg-accept-color);
 			}
 
 			:host([status="out-of-date"]) #indicatorIcon,
 			:host([status="out-of-date"]) #status {
-				color: #FFC700;
+				color: var(--nodecg-execute-color);
 			}
 
 			:host([status="out-of-date"]) #status {
@@ -90,13 +91,13 @@ class NcgGraphicInstance extends MutableData(Polymer.PolymerElement) {
 			#duration {
 				@apply --layout-center;
 				@apply --layout-horizontal;
-				background: #525F78;
+				background: var(--nodecg-surface-2);
 				padding: 0 16px;
 			}
 
 			#ip {
 				@apply --layout-flex;
-				border-right: 1px solid #6F7D99;
+				border-right: 1px solid var(--nodecg-border-color);
 				min-width: 0;
 			}
 
@@ -107,7 +108,7 @@ class NcgGraphicInstance extends MutableData(Polymer.PolymerElement) {
 
 			#status {
 				@apply --layout-flex-none;
-				border-right: 1px solid #6F7D99;
+				border-right: 1px solid var(--nodecg-border-color);
 				width: 187px;
 			}
 
@@ -123,11 +124,11 @@ class NcgGraphicInstance extends MutableData(Polymer.PolymerElement) {
 			}
 
 			#reloadButton {
-				--nodecg-background-color: #6155BD;
+				--nodecg-background-color: var(--nodecg-configure-color);
 			}
 
 			#killButton {
-				--nodecg-background-color: #FF7575;
+				--nodecg-background-color: var(--nodecg-reject-color);
 			}
 
 			#diff {
